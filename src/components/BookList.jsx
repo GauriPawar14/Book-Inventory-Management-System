@@ -9,7 +9,8 @@ function BookList({ onSelectBook }) {
 
   // API call to fetch books
   useEffect(() => {
-    fetch("https://www.googleapis.com/books/v1/volumes?q=javascript")
+   
+    fetch("https://www.googleapis.com/books/v1/volumes?q=javascript&maxResults=10")
       .then((res) => res.json())
       .then((data) => {
         if (data.items) {
